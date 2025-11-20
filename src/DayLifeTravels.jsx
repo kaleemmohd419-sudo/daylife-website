@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Phone, Mail, MapPin, Users, Target, Award, Plane, Building2, Heart, Globe, Briefcase, Shield, Star, CheckCircle, Clock, TrendingUp, BookOpen, Home, MessageSquareTextIcon, MessageCircle, Instagram, Facebook } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight, Phone, Mail, MapPin, Users, Target, Award, Plane, Building2, Heart, Globe, Briefcase, Shield, Star, CheckCircle, Clock, TrendingUp, BookOpen, MessageCircle, Instagram, Facebook } from 'lucide-react';
 import indianFlagMp4 from "./assets/flag-indian.mp4";
 import saudiarabiaFlagMp4 from "./assets/flag-saudiarabia.mp4";
 import mecca from "./assets/images/mecca.jpeg"
@@ -18,7 +18,7 @@ import gatewayImg from "./assets/images/banner/gateway-to-saudi.webp"
 import completeTravelSolutionImg from "./assets/images/banner/complete-travel-solutions.png"
 import experienceImg from "./assets/images/banner/14+-years-excellence.webp"
 
-import logo from "./assets/images/logo.jpeg"
+import logo from "./assets/images/logo.png"
 
 const DayLifeTravels = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -84,22 +84,31 @@ const DayLifeTravels = () => {
       <div className="h-2 bg-gradient-to-r from-orange-500 via-white to-green-600"></div>
 
       {/* Header */}
-      <header className="bg-gradient-to-r from-orange-600 via-green-700 to-emerald-800 text-white shadow-2xl sticky top-0 z-50">
+      <header className="bg-gradient-to-r from-orange-600 via-green-700 to-emerald-800 text-white shadow-2xl md:sticky md:top-0 md:z-50">
         <div className="container mx-auto px-2 py-5">
           <div className="flex items-center justify-between flex-wrap gap-4">
-            <div className="flex items-center space-x-4">
-              <div className="bg-white p-3 rounded-full shadow-lg">
-                <img src={logo} alt="" className="h-10 w-10" />
+            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-4 p-3">
+              <div className="bg-white rounded-full shadow-md flex-shrink-0">
+                <img
+                  src={logo}
+                  alt="Golden Dreams Agency logo"
+                  className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-cover rounded-full"
+                />
               </div>
-              <div>
-                <h1 className="text-4xl font-bold tracking-wide bg-gradient-to-r from-yellow-200 to-white bg-clip-text text-transparent">
+
+              <div className="text-center sm:text-left">
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-wide
+                              bg-gradient-to-r from-yellow-300 via-yellow-200 to-white
+                              bg-clip-text text-transparent py-1">
                   Golden Dreams Agency
                 </h1>
-                <p className="text-sm text-orange-100 font-semibold">
-                  🇮🇳 Licensed Travel & Recruitment Agency 🇸🇦
+
+                <p className="text-xs sm:text-sm text-orange-200 font-semibold">
+                  Golden Way to Saudi
                 </p>
               </div>
             </div>
+
             <div className="hidden lg:flex space-x-8 text-lg">
               <a href="#about" className="hover:text-yellow-300 transition font-semibold">About</a>
               <a href="#services" className="hover:text-yellow-300 transition font-semibold">Services</a>
@@ -135,13 +144,13 @@ const DayLifeTravels = () => {
                       className="w-20 h-14 object-cover rounded-lg shadow-2xl border-2 border-white"
                     />
                   </div>
-                  <h2 className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-2xl animate-pulse">
+                  <h2 className="text-3xl md:text-7xl font-bold mb-6 drop-shadow-2xl animate-pulse">
                     {banner.title}
                   </h2>
-                  <p className="text-2xl md:text-3xl text-yellow-200 font-semibold drop-shadow-lg">
+                  <p className="text-xl md:text-3xl text-yellow-200 font-semibold drop-shadow-lg">
                     {banner.subtitle}
                   </p>
-                  <button className="mt-8 bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-10 py-4 rounded-full text-xl font-bold shadow-2xl hover:scale-110 transition transform">
+                  <button className="mt-6 bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-8 py-2 rounded-full text-lg font-bold shadow-2xl hover:scale-110 transition transform">
                     Get Started Today
                   </button>
                 </div>
@@ -149,18 +158,26 @@ const DayLifeTravels = () => {
             </div>
           </div>
         ))}
+        
         <button
-          onClick={prevSlide}
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-orange-500 to-green-600 hover:from-orange-600 hover:to-green-700 rounded-full p-3 transition shadow-2xl"
-        >
-          <ChevronLeft className="w-10 h-10 text-white" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-orange-500 to-green-600 hover:from-orange-600 hover:to-green-700 rounded-full p-3 transition shadow-2xl"
-        >
-          <ChevronRight className="w-10 h-10 text-white" />
-        </button>
+            onClick={prevSlide}
+            className="absolute left-6 top-1/2 transform -translate-y-1/2
+                      bg-transparent hover:bg-transparent
+                      rounded-full p-2 transition shadow-2xl"
+          >
+            <ChevronLeft className="w-10 h-10 text-white" />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-6 top-1/2 transform -translate-y-1/2
+                      bg-transparent hover:bg-transparent
+                      rounded-full p-2 transition shadow-2xl"
+          >
+            <ChevronRight className="w-10 h-10 text-white" />
+          </button>
+
+
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
           {banners.map((_, index) => (
             <button
@@ -176,7 +193,7 @@ const DayLifeTravels = () => {
       {/* Animated Stats Bar */}
       <div className="bg-gradient-to-r from-green-700 via-emerald-600 to-green-700 py-8 shadow-2xl">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {[
               { icon: Clock, number: "14+", label: "Years Experience" },
               { icon: Users, number: "10,000+", label: "Candidates Placed" },
@@ -184,8 +201,8 @@ const DayLifeTravels = () => {
               { icon: Globe, number: "100%", label: "Success Rate" }
             ].map((stat, idx) => (
               <div key={idx} className="text-center text-white">
-                <stat.icon className="w-12 h-12 mx-auto mb-3 animate-bounce" />
-                <div className="text-4xl font-bold text-yellow-300">{stat.number}</div>
+                <stat.icon className="w-10 h-10 mx-auto mb-1 animate-bounce" />
+                <div className="text-2xl font-bold text-yellow-300">{stat.number}</div>
                 <div className="text-sm font-semibold mt-1">{stat.label}</div>
               </div>
             ))}
@@ -323,7 +340,7 @@ const DayLifeTravels = () => {
           <div className="inline-block mb-4">
             <Award className="w-20 h-20 text-orange-600 mx-auto animate-bounce" />
           </div>
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-600 via-green-600 to-emerald-700 bg-clip-text text-transparent mb-4">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 via-green-600 to-emerald-700 bg-clip-text text-transparent mb-4">
             About Golden Dreams Agency
           </h2>
           <div className="flex justify-center space-x-2">
@@ -341,9 +358,9 @@ const DayLifeTravels = () => {
                 alt="Professional Team"
                 className="rounded-3xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-orange-600 to-green-700 text-white p-6 rounded-2xl shadow-2xl">
-                <p className="text-4xl font-bold">14+</p>
-                <p className="text-sm font-semibold">Years Legacy</p>
+              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-orange-600 to-green-700 text-white p-2 md:p-6 rounded-2xl shadow-2xl">
+                <p className="text-xl md:text-4xl md:font-bold">14+</p>
+                <p className="text-sm md:font-semibold">Years Legacy</p>
               </div>
             </div>
           </div>
@@ -383,9 +400,9 @@ const DayLifeTravels = () => {
       <section id="gallery" className="py-20 bg-gradient-to-br from-green-900 via-emerald-800 to-green-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Globe className="w-20 h-20 text-yellow-400 mx-auto mb-4 animate-spin" style={{ animationDuration: '3s' }} />
-            <h2 className="text-5xl font-bold mb-4">Discover Saudi Arabia</h2>
-            <p className="text-xl text-green-200">Your New Destination for Success & Spirituality</p>
+            <Globe className="w-12 h-12 md:w-20 md:h-20 text-yellow-400 mx-auto mb-4 animate-spin" style={{ animationDuration: '3s' }} />
+            <h2 className="text-2xl md:text-5xl font-bold mb-4">Discover Saudi Arabia</h2>
+            <p className="text-lg md:text-xl text-green-200">Your New Destination for Success & Spirituality</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -405,7 +422,7 @@ const DayLifeTravels = () => {
                     <p className="text-white">{item.desc}</p>
                   </div>
                 </div>
-                <div className="absolute top-4 right-4 bg-orange-600 text-white px-4 py-2 rounded-full font-bold shadow-lg">
+                <div className="absolute top-4 right-4 bg-orange-600 text-white px-2 py-1 md:px-4 md:py-2 rounded-full md:font-bold shadow-lg">
                   Explore
                 </div>
               </div>
@@ -419,7 +436,7 @@ const DayLifeTravels = () => {
       <section id="services" className="py-20 container mx-auto px-4">
         <div className="text-center mb-16">
           <Briefcase className="w-20 h-20 text-green-700 mx-auto mb-4 animate-bounce" />
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-600 to-green-700 bg-clip-text text-transparent mb-4">
+          <h2 className="text-2xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 to-green-700 bg-clip-text text-transparent mb-4">
             Our Premium Facilities & Services
           </h2>
           <div className="flex justify-center space-x-2 mb-6">
@@ -471,7 +488,7 @@ const DayLifeTravels = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <Target className="w-20 h-20 text-orange-700 mx-auto mb-4 animate-pulse" />
-            <h2 className="text-5xl font-bold text-gray-800 mb-4">Our Mission & Vision</h2>
+            <h2 className="text-2xl md:text-5xl font-bold text-gray-800 mb-4">Our Mission & Vision</h2>
             <div className="flex justify-center space-x-2">
               <div className="w-24 h-2 bg-orange-600 rounded"></div>
               <div className="w-24 h-2 bg-white rounded"></div>
@@ -526,7 +543,7 @@ const DayLifeTravels = () => {
           <div className="text-center mt-16">
             <div className="inline-block bg-gradient-to-r from-orange-600 via-white to-green-700 p-1 rounded-full shadow-2xl">
               <div className="bg-white px-12 py-6 rounded-full">
-                <p className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-green-700 bg-clip-text text-transparent">
+                <p className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 to-green-700 bg-clip-text text-transparent">
                   🏆 14+ Years of Excellence 🏆
                 </p>
                 <p className="text-gray-600 font-semibold mt-2">India's Most Trusted Recruitment Partner</p>
@@ -541,7 +558,7 @@ const DayLifeTravels = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Star className="w-20 h-20 text-yellow-500 mx-auto mb-4 animate-spin" style={{ animationDuration: '4s' }} />
-            <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-600 to-green-700 bg-clip-text text-transparent mb-4">
+            <h2 className="text-2xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 to-green-700 bg-clip-text text-transparent mb-4">
               Success Stories
             </h2>
             <p className="text-xl text-gray-700">Hear from our satisfied clients and candidates</p>
@@ -588,7 +605,7 @@ const DayLifeTravels = () => {
       <section className="py-20 container mx-auto px-4">
         <div className="text-center mb-16">
           <Award className="w-20 h-20 text-orange-600 mx-auto mb-4 animate-bounce" />
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-600 to-green-700 bg-clip-text text-transparent mb-4">
+          <h2 className="text-2xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 to-green-700 bg-clip-text text-transparent mb-4">
             Why Choose Golden Dreams Agency?
           </h2>
         </div>
@@ -620,7 +637,7 @@ const DayLifeTravels = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Phone className="w-20 h-20 text-orange-600 mx-auto mb-4 animate-bounce" />
-            <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-600 to-green-700 bg-clip-text text-transparent mb-4">
+            <h2 className="text-2xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 to-green-700 bg-clip-text text-transparent mb-4">
               Get In Touch With Us
             </h2>
             <div className="flex justify-center space-x-2">
@@ -742,7 +759,7 @@ const DayLifeTravels = () => {
                 <div className="bg-white px-8 py-6 rounded-2xl">
                   <div className="flex items-center justify-center space-x-3 mb-3">
                     <Shield className="w-8 h-8 text-orange-600" />
-                    <h4 className="text-2xl font-bold text-gray-800">Government Authorized</h4>
+                    <h4 className="text-xl md:text-2xl font-bold text-gray-800">Government Authorized</h4>
                   </div>
                   <p className="text-sm text-gray-600 font-semibold">
                     Licensed Travel Agency • Ministry of Tourism Approved
@@ -752,10 +769,10 @@ const DayLifeTravels = () => {
                   </p>
                   <div className="mt-4 flex justify-center space-x-4">
                     <div className="bg-orange-100 px-4 py-2 rounded-lg">
-                      <p className="text-xs font-bold text-orange-700">IATA Certified</p>
+                      <p className="text-xs md:font-bold text-orange-700">IATA Certified</p>
                     </div>
                     <div className="bg-green-100 px-4 py-2 rounded-lg">
-                      <p className="text-xs font-bold text-green-700">ISO Certified</p>
+                      <p className="text-xs md:font-bold text-green-700">ISO Certified</p>
                     </div>
                   </div>
                 </div>
@@ -771,9 +788,6 @@ const DayLifeTravels = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="bg-gradient-to-r from-orange-500 to-green-600 p-3 rounded-xl">
-                  <Plane className="w-8 h-8 text-white" />
-                </div>
                 <h3 className="text-2xl font-bold">Golden Dreams Agency</h3>
               </div>
               <p className="text-gray-400 leading-relaxed">
