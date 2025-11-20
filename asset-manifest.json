@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/daylife-website/static/css/main.c5b8eb58.css",
+    "main.js": "/daylife-website/static/js/main.949c042f.js",
+    "static/js/453.81fc678f.chunk.js": "/daylife-website/static/js/453.81fc678f.chunk.js",
+    "static/media/flag-indian.mp4": "/daylife-website/static/media/flag-indian.1eff354ce4cf270f9e24.mp4",
+    "static/media/flag-saudiarabia.mp4": "/daylife-website/static/media/flag-saudiarabia.028553dba2aa92f6b3be.mp4",
+    "static/media/complete-travel-solutions.png": "/daylife-website/static/media/complete-travel-solutions.7cbad1221c6ebe17c9dd.png",
+    "static/media/jeddah.jpeg": "/daylife-website/static/media/jeddah.134d1e5cc5ddce3c9ff2.jpeg",
+    "static/media/kingdom-tower.jpeg": "/daylife-website/static/media/kingdom-tower.f3b26395100a4ba95c36.jpeg",
+    "static/media/gateway-to-saudi.webp": "/daylife-website/static/media/gateway-to-saudi.afaac9b2b4962b0ca29d.webp",
+    "static/media/riyadh.jpeg": "/daylife-website/static/media/riyadh.a23fe99caf679754126a.jpeg",
+    "static/media/ind-x-sa.jpeg": "/daylife-website/static/media/ind-x-sa.cd17a35a6930da7518c7.jpeg",
+    "static/media/madeena.jpeg": "/daylife-website/static/media/madeena.f8decdf6b870db8a4b74.jpeg",
+    "static/media/licensed.jpg": "/daylife-website/static/media/licensed.6f5c38faa601a3177470.jpg",
+    "static/media/mecca.jpeg": "/daylife-website/static/media/mecca.5697c56b2e0146f62a6f.jpeg",
+    "static/media/14+-years-excellence.webp": "/daylife-website/static/media/14+-years-excellence.ffd5669ebbee362101b3.webp",
+    "static/media/logo.jpeg": "/daylife-website/static/media/logo.66a73bd0316ffb3a0462.jpeg",
+    "static/media/Flag_of_Saudi_Arabia.svg": "/daylife-website/static/media/Flag_of_Saudi_Arabia.7a52d7dc51d13939da38f74050df583b.svg",
+    "static/media/Flag_of_India.svg": "/daylife-website/static/media/Flag_of_India.6b649ec2cfe3d0a7fbf24f08270c33a1.svg",
+    "index.html": "/daylife-website/index.html",
+    "main.c5b8eb58.css.map": "/daylife-website/static/css/main.c5b8eb58.css.map",
+    "main.949c042f.js.map": "/daylife-website/static/js/main.949c042f.js.map",
+    "453.81fc678f.chunk.js.map": "/daylife-website/static/js/453.81fc678f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5b8eb58.css",
+    "static/js/main.949c042f.js"
+  ]
+}
