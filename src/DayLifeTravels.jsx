@@ -18,7 +18,7 @@ import gatewayImg from "./assets/images/banner/gateway-to-saudi.webp"
 import completeTravelSolutionImg from "./assets/images/banner/complete-travel-solutions.png"
 import experienceImg from "./assets/images/banner/14+-years-excellence.webp"
 
-import logo from "./assets/images/logo.png"
+import Header from './Header';
 
 const DayLifeTravels = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -84,7 +84,7 @@ const DayLifeTravels = () => {
       <div className="h-2 bg-gradient-to-r from-orange-500 via-white to-green-600"></div>
 
       {/* Header */}
-      <header className="bg-gradient-to-r from-orange-600 via-green-700 to-emerald-800 text-white shadow-2xl md:sticky md:top-0 md:z-50">
+      {/* <header className="bg-gradient-to-r from-orange-600 via-green-700 to-emerald-800 text-white shadow-2xl md:sticky md:top-0 md:z-50">
         <div className="container mx-auto px-2 py-5">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-4 p-3">
@@ -118,7 +118,8 @@ const DayLifeTravels = () => {
             </div>
           </div>
         </div>
-      </header>
+      </header> */}
+      <Header />
 
       {/* Enhanced Banner Slider */}
       <div className="relative h-[500px] md:h-[600px] overflow-hidden">
@@ -273,53 +274,65 @@ const DayLifeTravels = () => {
       {/* Responsive Flags Connection Section */}
       <div className="relative py-10 md:py-16 bg-gradient-to-br from-orange-100 via-white to-green-100 overflow-hidden">
         {/* Background Blurs */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-32 h-32 md:w-64 md:h-64 bg-orange-500 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-green-600 rounded-full blur-3xl"></div>
-        </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex justify-center gap-8 md:gap-16 flex-wrap">
-
-            {/* India Flag */}
-            {/* Flag block — replace the existing flag container with this */}
-            <div className="text-center transform hover:scale-105 transition w-30 md:w-auto flex flex-col items-center justify-center">
-              <div className="relative">
-                <video
-                  src={indianFlagMp4}         // or saudiarabiaFlagMp4 for the right block
-                  autoPlay
-                  loop
-                  muted
-                  className="w-40 h-27 md:w-48 md:h-32 object-cover rounded-xl shadow-xl border-2 md:border-4 border-orange-500 mb-2 mx-auto"
-                />
-              </div>
-              <p className="font-bold text-sm sm:text-base md:text-lg text-orange-700 mt-1 whitespace-nowrap leading-tight">
-                भारत • India
-              </p>
+          {/* Responsive Flags Connection Section (no horizontal scroll on phones) */}
+          <div className="relative py-10 md:py-16 bg-gradient-to-br from-orange-100 via-white to-green-100 overflow-hidden">
+            {/* Background Blurs */}
+            <div className="absolute inset-0 opacity-10 pointer-events-none">
+              <div className="absolute top-0 left-0 w-32 h-32 md:w-64 md:h-64 bg-orange-500 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-green-600 rounded-full blur-3xl" />
             </div>
 
+            <div className="container mx-auto px-4 relative z-10">
+              {/* Mobile-first: stacked (no horizontal scroll). On sm+ -> row */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-12">
+                {/* India Flag */}
+                <div className="w-full sm:w-auto max-w-xs sm:max-w-none text-center transform hover:scale-105 transition">
+                  <div className="relative">
+                    <video
+                      src={indianFlagMp4}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full sm:w-48 md:w-56 h-auto object-cover rounded-xl shadow-xl border-2 md:border-4 border-orange-500 mb-2 mx-auto"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <p className="font-bold text-sm sm:text-base md:text-lg text-orange-700 mt-1 leading-tight whitespace-normal" dir="auto">
+                    भारत • India
+                  </p>
+                </div>
 
-            {/* Plane Icon */}
-            <div className="text-center mt-4">
-              <div className="bg-gradient-to-r from-orange-500 via-green-600 to-emerald-700 p-2 sm:p-3 md:p-4 rounded-full shadow-xl animate-pulse w-fit m-auto">
-                <Plane className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 text-white transform rotate-45" />
-              </div>
-            </div>
+                {/* Plane Icon - stays centered between flags on wide screens, appears inline in column on phones */}
+                <div className="flex items-center justify-center">
+                  <div className="bg-gradient-to-r from-orange-500 via-green-600 to-emerald-700 p-2 sm:p-3 md:p-4 rounded-full shadow-xl animate-pulse inline-flex items-center justify-center">
+                    <Plane className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 text-white transform rotate-45" />
+                  </div>
+                </div>
 
-            {/* Saudi Arabia Flag */}
-            <div className="text-center transform hover:scale-105 transition w-30 md:w-auto">
-              <div className="relative">
-                <video
-                  src={saudiarabiaFlagMp4}
-                  autoPlay
-                  loop
-                  muted
-                  className="w-40 h-27 md:w-48 md:h-32 object-cover rounded-xl shadow-xl border-2 md:border-4 border-orange-500 mb-2 mx-auto"
-                />
+                {/* Saudi Arabia Flag */}
+                <div className="w-full sm:w-auto max-w-xs sm:max-w-none text-center transform hover:scale-105 transition">
+                  <div className="relative">
+                    <video
+                      src={saudiarabiaFlagMp4}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full sm:w-48 md:w-56 h-auto object-cover rounded-xl shadow-xl border-2 md:border-4 border-orange-500 mb-2 mx-auto"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <p className="font-bold text-sm sm:text-base md:text-lg text-green-800 mt-1 leading-tight whitespace-normal" dir="auto">
+                    السعودية • Saudi Arabia
+                  </p>
+                </div>
               </div>
-              <p className="font-bold text-sm sm:text-base md:text-lg text-green-800 mt-1">السعودية • Saudi Arabia</p>
             </div>
           </div>
+
 
 
           {/* Bottom Banner */}
@@ -351,7 +364,7 @@ const DayLifeTravels = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          {/* <div className="space-y-6">
             <div className="relative">
               <img
                 src={indXSa}
@@ -359,6 +372,31 @@ const DayLifeTravels = () => {
                 className="rounded-3xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
               />
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-orange-600 to-green-700 text-white p-2 md:p-6 rounded-2xl shadow-2xl">
+                <p className="text-xl md:text-4xl md:font-bold">14+</p>
+                <p className="text-sm md:font-semibold">Years Legacy</p>
+              </div>
+            </div>
+          </div> */}
+
+          <div className="space-y-6">
+            <div className="relative overflow-visible"> {/* keep overflow-visible so badge shows, but we handle small screens below */}
+              <img
+                src={indXSa}
+                alt="Professional Team"
+                className="rounded-3xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
+              />
+
+              {/* Badge: responsive positioning so it NEVER pushes the page horizontally on small screens */}
+              <div
+                className="
+                  absolute
+                  -bottom-6
+                  right-4         /* on small screens keep it inside */
+                  md:-right-6     /* on md+ allow the overlap outside image */
+                  bg-gradient-to-r from-orange-600 to-green-700 text-white
+                  p-2 md:p-6 rounded-2xl shadow-2xl
+                "
+              >
                 <p className="text-xl md:text-4xl md:font-bold">14+</p>
                 <p className="text-sm md:font-semibold">Years Legacy</p>
               </div>
@@ -463,10 +501,10 @@ const DayLifeTravels = () => {
               { icon: BookOpen, title: "Administration", desc: "General Administration, Office Management, Support Staff, Coordinators", color: "from-teal-600 to-cyan-700", bgColor: "from-teal-50 to-cyan-50" }
             ].map((service, index) => (
               <div key={index} className={`bg-gradient-to-br ${service.bgColor} p-8 rounded-3xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2 border-2 border-white`}>
-                <div className={`bg-gradient-to-r ${service.color} w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className={`bg-gradient-to-r ${service.color} w-10 h-10 md:w-16 md:h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
+                  <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                 </div>
-                <h4 className="font-bold text-2xl text-gray-800 mb-3">{service.title}</h4>
+                <h4 className="font-bold text-xl md:text-2xl text-gray-800 mb-3">{service.title}</h4>
                 <p className="text-gray-700 leading-relaxed">{service.desc}</p>
                 <div className="mt-4 flex items-center text-sm font-semibold text-gray-600">
                   <CheckCircle className="w-5 h-5 mr-2 text-green-600" />
@@ -496,14 +534,14 @@ const DayLifeTravels = () => {
             </div>
           </div>
 
-          <div className="max-w-6xl mx-auto space-y-8">
+          <div className="max-w-6xl mx-auto space-y-4">
             <div className="bg-white bg-opacity-95 backdrop-blur-lg rounded-3xl p-10 shadow-2xl border-l-8 border-orange-600 transform hover:scale-105 transition">
               <div className="flex items-start space-x-6">
-                <div className="bg-gradient-to-r from-orange-500 to-red-600 p-4 rounded-2xl">
-                  <Target className="w-12 h-12 text-white" />
+                <div className="bg-gradient-to-r from-orange-500 to-red-600 p-2 md:p-4 rounded-2xl">
+                  <Target className="w-6 h-6 md:w-12 md:h-12 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-orange-700 mb-4">Our Commitment</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-orange-700 mb-4">Our Commitment</h3>
                   <p className="text-lg text-gray-800 leading-relaxed">
                     We dedicate ourselves to delivering a high level of competency, professionalism, and satisfaction, while continuously improving client and applicant relationships. To provide an efficient and professional recruitment service to our valued clients and candidates.
                   </p>
@@ -513,11 +551,11 @@ const DayLifeTravels = () => {
 
             <div className="bg-white bg-opacity-95 backdrop-blur-lg rounded-3xl p-10 shadow-2xl border-l-8 border-green-700 transform hover:scale-105 transition">
               <div className="flex items-start space-x-6">
-                <div className="bg-gradient-to-r from-green-600 to-emerald-700 p-4 rounded-2xl">
-                  <Award className="w-12 h-12 text-white" />
+                <div className="bg-gradient-to-r from-green-600 to-emerald-700 p-2 md:p-4 rounded-2xl">
+                  <Award className="w-6 h-6 md:w-12 md:h-12 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-green-700 mb-4">14+ Years of Trust</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-green-700 mb-4">14+ Years of Trust</h3>
                   <p className="text-lg text-gray-800 leading-relaxed">
                     We hereby take this opportunity to sincerely thank all our existing and prospective clients based in India and all over the Middle East, as well as our educated and experienced candidates for your trust and cooperation during more than <strong className="text-green-700 text-xl">14 YEARS</strong> with the company.
                   </p>
@@ -527,11 +565,11 @@ const DayLifeTravels = () => {
 
             <div className="bg-gradient-to-br from-yellow-100 to-orange-100 rounded-3xl p-10 shadow-2xl border-4 border-yellow-500 transform hover:scale-105 transition">
               <div className="flex items-start space-x-6">
-                <div className="bg-gradient-to-r from-yellow-600 to-orange-600 p-4 rounded-2xl">
-                  <Star className="w-12 h-12 text-white" />
+                <div className="bg-gradient-to-r from-yellow-600 to-orange-600 p-2 md:p-4 rounded-2xl">
+                  <Star className="w-6 h-6 md:w-12 md:h-12 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-orange-700 mb-4">Our Gratitude</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-orange-700 mb-4">Our Gratitude</h3>
                   <p className="text-lg text-gray-800 leading-relaxed italic">
                     "Finally, I would like to offer my thanks to those clients, candidates, staff, and government and non-governmental agencies in India and abroad who stretched their helping hand for us to become a predominant manpower supplier."
                   </p>
@@ -622,8 +660,8 @@ const DayLifeTravels = () => {
             { icon: TrendingUp, title: "Career Growth", desc: "Opportunities for professional development", color: "from-indigo-600 to-purple-700" }
           ].map((feature, idx) => (
             <div key={idx} className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2 border-2 border-gray-100">
-              <div className={`bg-gradient-to-r ${feature.color} w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg mx-auto`}>
-                <feature.icon className="w-8 h-8 text-white" />
+              <div className={`bg-gradient-to-r ${feature.color} w-10 h-10 md:w-16 md:h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg mx-auto`}>
+                <feature.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
               </div>
               <h4 className="font-bold text-xl text-gray-800 mb-3 text-center">{feature.title}</h4>
               <p className="text-gray-600 text-center leading-relaxed">{feature.desc}</p>
@@ -651,7 +689,7 @@ const DayLifeTravels = () => {
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-orange-200">
               <div className="grid md:grid-cols-2">
                 <div className="bg-gradient-to-br from-orange-600 via-white to-green-700 p-12 text-white">
-                  <h3 className="text-3xl font-bold mb-8 text-gray-800">Contact Information</h3>
+                  <h3 className="text-xl md:text-3xl font-bold mb-8 text-gray-800">Contact Information</h3>
 
                   <div className="space-y-8">
                     <div className="flex items-start space-x-4">
@@ -746,7 +784,7 @@ const DayLifeTravels = () => {
                     ></textarea>
                     <button 
                       onClick={handleClick}
-                      className="w-full bg-gradient-to-r from-orange-600 to-green-700 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
+                      className="w-full bg-gradient-to-r from-orange-600 to-green-700 text-white font-bold py-2 md:py-3 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
                       Send Message
                     </button>
                   </div>
