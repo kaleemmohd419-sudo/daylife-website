@@ -639,7 +639,7 @@ const DayLifeTravels = () => {
 
                     <div className="flex items-start space-x-4">
                       <div className="bg-white p-3 rounded-xl shadow-lg">
-                        <MessageCircle className="w-6 h-6 text-green-700" />
+                        <FaWhatsapp className="w-6 h-6 text-green-700" />
                       </div>
                       <div>
                         <h4 className="font-bold text-lg text-gray-800 mb-1">WhatsApp</h4>
@@ -759,9 +759,9 @@ const DayLifeTravels = () => {
       <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <h3 className="text-base sm:text-lg md:text-2xl font-bold tracking-wide
+            <div className="text-center flex flex-col items-center">
+              <div className="mb-4">
+                <h3 className="text-center text-base sm:text-lg md:text-2xl font-bold tracking-wide
                              bg-gradient-to-r from-yellow-300 via-yellow-200 to-white
                              bg-clip-text text-transparent leading-tight">Golden Dreams Agency</h3>
               </div>
@@ -801,15 +801,15 @@ const DayLifeTravels = () => {
                 </div>
 
                 <div className="flex items-center space-x-3 justify-center">
+                  <Phone className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-400">+966 508021982</span>
+                </div>
+
+                <div className="flex items-center space-x-3 justify-center">
                   <FaWhatsapp className="w-5 h-5 text-green-400" />
                   <span className="text-gray-400">
                     <a href="https://wa.me/+918143190670">+91 8143190670</a>
                   </span>
-                </div>
-
-                <div className="flex items-center space-x-3 justify-center">
-                  <Phone className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-400">+966 508021982</span>
                 </div>
 
                 <div className="flex items-center space-x-3 justify-center">
