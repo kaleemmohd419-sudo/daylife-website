@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/daylife-website/static/css/main.3d947bdf.css",
-    "main.js": "/daylife-website/static/js/main.941c9bc6.js",
+    "main.css": "/daylife-website/static/css/main.714c52cf.css",
+    "main.js": "/daylife-website/static/js/main.dc985c15.js",
     "static/js/453.81fc678f.chunk.js": "/daylife-website/static/js/453.81fc678f.chunk.js",
     "static/media/flag-indian.mp4": "/daylife-website/static/media/flag-indian.1eff354ce4cf270f9e24.mp4",
     "static/media/flag-saudiarabia.mp4": "/daylife-website/static/media/flag-saudiarabia.028553dba2aa92f6b3be.mp4",
@@ -19,12 +19,12 @@
     "static/media/Flag_of_Saudi_Arabia.svg": "/daylife-website/static/media/Flag_of_Saudi_Arabia.7a52d7dc51d13939da38f74050df583b.svg",
     "static/media/Flag_of_India.svg": "/daylife-website/static/media/Flag_of_India.6b649ec2cfe3d0a7fbf24f08270c33a1.svg",
     "index.html": "/daylife-website/index.html",
-    "main.3d947bdf.css.map": "/daylife-website/static/css/main.3d947bdf.css.map",
-    "main.941c9bc6.js.map": "/daylife-website/static/js/main.941c9bc6.js.map",
+    "main.714c52cf.css.map": "/daylife-website/static/css/main.714c52cf.css.map",
+    "main.dc985c15.js.map": "/daylife-website/static/js/main.dc985c15.js.map",
     "453.81fc678f.chunk.js.map": "/daylife-website/static/js/453.81fc678f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d947bdf.css",
-    "static/js/main.941c9bc6.js"
+    "static/css/main.714c52cf.css",
+    "static/js/main.dc985c15.js"
   ]
 }
