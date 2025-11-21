@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Phone, Mail, MapPin, Users, Target, Award, Plane, Building2, Heart, Globe, Briefcase, Shield, Star, CheckCircle, Clock, TrendingUp, BookOpen, MessageCircle, Instagram, Facebook } from 'lucide-react';
+import { FaWhatsapp } from "react-icons/fa";
+
 import indianFlagMp4 from "./assets/flag-indian.mp4";
 import saudiarabiaFlagMp4 from "./assets/flag-saudiarabia.mp4";
 import mecca from "./assets/images/mecca.jpeg"
@@ -11,14 +13,13 @@ import kingdomTower from "./assets/images/kingdom-tower.jpeg"
 import indianFlagSvg from "./assets/images/Flag_of_India.svg"
 import saudiArabiaFlagSvg from "./assets/images/Flag_of_Saudi_Arabia.svg"
 
-import indXSa from "./assets/images/ind-x-sa.jpeg"
-
 import licenseImg from "./assets/images/banner/licensed.jpg"
 import gatewayImg from "./assets/images/banner/gateway-to-saudi.webp"
 import completeTravelSolutionImg from "./assets/images/banner/complete-travel-solutions.png"
 import experienceImg from "./assets/images/banner/14+-years-excellence.webp"
 
 import Header from './Header';
+import FeatureSection from './FeatureSection';
 
 const DayLifeTravels = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -33,7 +34,7 @@ const DayLifeTravels = () => {
     },
     {
       image: experienceImg,
-      title: "14+ Years of Excellence",
+      title: "9+ Years of Excellence",
       subtitle: "India's Most Trusted Manpower Recruitment Partner",
       gradient: "from-green-700/80 via-white/20 to-orange-600/80"
     },
@@ -54,7 +55,7 @@ const DayLifeTravels = () => {
   const testimonials = [
     { name: "Rajesh Kumar", role: "Engineer in Riyadh", text: "Golden Dreams Agency helped me secure my dream job in Saudi Arabia. Professional service!" },
     { name: "Fatima Ahmed", role: "Nurse in Jeddah", text: "Excellent support throughout the visa process. Highly recommended!" },
-    { name: "Mohammed Ali", role: "IT Professional", text: "14 years of experience shows in their service quality. Thank you!" }
+    { name: "Mohammed Ali", role: "IT Professional", text: "9 years of experience shows in their service quality. Thank you!" }
   ];
 
   useEffect(() => {
@@ -196,7 +197,7 @@ const DayLifeTravels = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {[
-              { icon: Clock, number: "14+", label: "Years Experience" },
+              { icon: Clock, number: "9+", label: "Years Experience" },
               { icon: Users, number: "10,000+", label: "Candidates Placed" },
               { icon: Building2, number: "500+", label: "Partner Companies" },
               { icon: Globe, number: "100%", label: "Success Rate" }
@@ -347,6 +348,7 @@ const DayLifeTravels = () => {
           </div>
         </div>
       </div>
+      
       {/* About Section with Indian & Saudi Colors */}
       <section id="about" className="py-20 container mx-auto px-4">
         <div className="text-center mb-16">
@@ -362,77 +364,10 @@ const DayLifeTravels = () => {
             <div className="w-20 h-1 bg-green-600 rounded"></div>
           </div>
         </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* <div className="space-y-6">
-            <div className="relative">
-              <img
-                src={indXSa}
-                alt="Professional Team"
-                className="rounded-3xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-orange-600 to-green-700 text-white p-2 md:p-6 rounded-2xl shadow-2xl">
-                <p className="text-xl md:text-4xl md:font-bold">14+</p>
-                <p className="text-sm md:font-semibold">Years Legacy</p>
-              </div>
-            </div>
-          </div> */}
-
-          <div className="space-y-6">
-            <div className="relative overflow-visible"> {/* keep overflow-visible so badge shows, but we handle small screens below */}
-              <img
-                src={indXSa}
-                alt="Professional Team"
-                className="rounded-3xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
-              />
-
-              {/* Badge: responsive positioning so it NEVER pushes the page horizontally on small screens */}
-              <div
-                className="
-                  absolute
-                  -bottom-6
-                  right-4         /* on small screens keep it inside */
-                  md:-right-6     /* on md+ allow the overlap outside image */
-                  bg-gradient-to-r from-orange-600 to-green-700 text-white
-                  p-2 md:p-6 rounded-2xl shadow-2xl
-                "
-              >
-                <p className="text-xl md:text-4xl md:font-bold">14+</p>
-                <p className="text-sm md:font-semibold">Years Legacy</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-3xl shadow-xl border-l-8 border-orange-600 transform hover:scale-105 transition">
-              <div className="flex items-start space-x-4">
-                <CheckCircle className="w-8 h-8 text-orange-600 flex-shrink-0" />
-                <p className="text-gray-800 leading-relaxed text-lg">
-                  We are <strong className="text-orange-700">The Pioneer of Organized Recruitment Services in India</strong>. Over the years, we have acted as preferred recruitment partners to multinationals and leading Indian institutions to emerge as the leading recruitment nationally.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-3xl shadow-xl border-l-8 border-green-700 transform hover:scale-105 transition">
-              <div className="flex items-start space-x-4">
-                <TrendingUp className="w-8 h-8 text-green-700 flex-shrink-0" />
-                <p className="text-gray-800 leading-relaxed text-lg">
-                  We take pride in our extensive and diverse experiences in supplying manpower requirements. In today's competitive marketplace, only one thing can ensure your company's long-term success: <strong className="text-green-700">The Right People</strong>.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-100 p-8 rounded-3xl shadow-xl border-l-8 border-yellow-600 transform hover:scale-105 transition">
-              <div className="flex items-start space-x-4">
-                <Star className="w-8 h-8 text-yellow-600 flex-shrink-0" />
-                <p className="text-gray-800 leading-relaxed text-lg">
-                  We would welcome the opportunity to work with your company and we are confident that we can fulfill your recruitment needs with the best talent in the industry. We will be your <strong className="text-yellow-700">Strategic Partner in Growth</strong>, both now and in the future.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <FeatureSection />
       </section>
+
+      
 
       {/* Saudi Arabia Gallery Section */}
       <section id="gallery" className="py-20 bg-gradient-to-br from-green-900 via-emerald-800 to-green-900 text-white">
@@ -555,9 +490,9 @@ const DayLifeTravels = () => {
                   <Award className="w-6 h-6 md:w-12 md:h-12 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-green-700 mb-4">14+ Years of Trust</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-green-700 mb-4">9+ Years of Trust</h3>
                   <p className="text-lg text-gray-800 leading-relaxed">
-                    We hereby take this opportunity to sincerely thank all our existing and prospective clients based in India and all over the Middle East, as well as our educated and experienced candidates for your trust and cooperation during more than <strong className="text-green-700 text-xl">14 YEARS</strong> with the company.
+                    We hereby take this opportunity to sincerely thank all our existing and prospective clients based in India and all over the Middle East, as well as our educated and experienced candidates for your trust and cooperation during more than <strong className="text-green-700 text-xl">9 YEARS</strong> with the company.
                   </p>
                 </div>
               </div>
@@ -582,7 +517,7 @@ const DayLifeTravels = () => {
             <div className="inline-block bg-gradient-to-r from-orange-600 via-white to-green-700 p-1 rounded-full shadow-2xl">
               <div className="bg-white px-12 py-6 rounded-full">
                 <p className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 to-green-700 bg-clip-text text-transparent">
-                  🏆 14+ Years of Excellence 🏆
+                  🏆 9+ Years of Excellence 🏆
                 </p>
                 <p className="text-gray-600 font-semibold mt-2">India's Most Trusted Recruitment Partner</p>
               </div>
@@ -651,7 +586,7 @@ const DayLifeTravels = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             { icon: Shield, title: "Licensed & Authorized", desc: "Government approved agency with all necessary certifications", color: "from-orange-500 to-red-600" },
-            { icon: Clock, title: "14+ Years Experience", desc: "Proven track record of successful placements since 1998", color: "from-green-600 to-emerald-700" },
+            { icon: Clock, title: "9+ Years Experience", desc: "Proven track record of successful placements since 2016", color: "from-green-600 to-emerald-700" },
             { icon: Globe, title: "Global Network", desc: "Strong connections in India, Saudi Arabia, and Middle East", color: "from-blue-600 to-indigo-700" },
             { icon: Users, title: "10,000+ Placements", desc: "Successfully placed thousands of candidates worldwide", color: "from-purple-600 to-pink-600" },
             { icon: CheckCircle, title: "100% Support", desc: "Complete assistance from visa to employment", color: "from-yellow-600 to-orange-600" },
@@ -826,10 +761,12 @@ const DayLifeTravels = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <h3 className="text-2xl font-bold">Golden Dreams Agency</h3>
+                <h3 className="text-base sm:text-lg md:text-2xl font-bold tracking-wide
+                             bg-gradient-to-r from-yellow-300 via-yellow-200 to-white
+                             bg-clip-text text-transparent leading-tight">Golden Dreams Agency</h3>
               </div>
               <p className="text-gray-400 leading-relaxed">
-                Your trusted partner for travel and recruitment services between India and Saudi Arabia for over 14 years.
+                Your trusted partner for travel and recruitment services between India and Saudi Arabia for over 9 years.
               </p>
             </div>
 
@@ -854,38 +791,46 @@ const DayLifeTravels = () => {
               </ul>
             </div>
 
-            <div>
+            <div className="text-center">
               <h4 className="font-bold text-xl mb-4 text-yellow-400">Connect With Us</h4>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
+
+              <div className="space-y-3 flex flex-col items-center">
+                <div className="flex items-center space-x-3 justify-center">
                   <Mail className="w-5 h-5 text-orange-400" />
-                  <span className="text-gray-400">dreamsagolden@gmail.com</span>
+                  <span className="text-gray-400"><a href="mailto:dreamsagolden@gmail.com">dreamsagolden@gmail.com</a></span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <MessageCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-400"><a href="https://wa.me/+918143190670">+91 8143190670</a></span>
+
+                <div className="flex items-center space-x-3 justify-center">
+                  <FaWhatsapp className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-400">
+                    <a href="https://wa.me/+918143190670">+91 8143190670</a>
+                  </span>
                 </div>
-                {/* <div className="flex items-center space-x-3">
-                  <MessageCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-400">+966 574003927</span>
-                </div> */}
-                <div className="flex items-center space-x-3">
+
+                <div className="flex items-center space-x-3 justify-center">
                   <Phone className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-400">+966 574003927</span>
+                  <span className="text-gray-400">+966 508021982</span>
                 </div>
-                <div className="flex items-center space-x-3">
+
+                <div className="flex items-center space-x-3 justify-center">
                   <Instagram className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-400"><a href="https://www.instagram.com/immu89600?utm_source=qr&igsh=MXEzeHlsZ3NlangyZw%3D%3D">Imran Ahmed</a></span>
+                  <span className="text-gray-400">
+                    <a href="https://www.instagram.com/immu89600?utm_source=qr&igsh=MXEzeHlsZ3NlangyZw%3D%3D">
+                      Imran Ahmed
+                    </a>
+                  </span>
                 </div>
-                <div className="flex items-center space-x-3">
+
+                <div className="flex items-center space-x-3 justify-center">
                   <Facebook className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-400"><a href="https://www.facebook.com/imran.ahmed.113044?rdid=zg0JXql4BRIx7MW3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BmJ8Ev8Mx%2F#">Imran Ahmed</a></span>
+                  <span className="text-gray-400">
+                    <a href="https://www.facebook.com/imran.ahmed.113044?rdid=zg0JXql4BRIx7MW3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BmJ8Ev8Mx%2F#">
+                      Imran Ahmed
+                    </a>
+                  </span>
                 </div>
-                {/* <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-400">+966 574003927</span>
-                </div> */}
-                <div className="flex items-center space-x-3">
+
+                <div className="flex items-center space-x-3 justify-center">
                   <MapPin className="w-5 h-5 text-yellow-400" />
                   <span className="text-gray-400">India</span>
                 </div>
@@ -894,8 +839,8 @@ const DayLifeTravels = () => {
           </div>
 
           <div className="border-t border-gray-700 pt-8">
-            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-              <p className="text-gray-400 text-center md:text-left">
+            <div className="flex flex-col items-center justify-between space-y-4">
+              <p className="text-gray-400 text-center">
                 © 2025 Golden Dreams Agency. All Rights Reserved. | Licensed Travel & Recruitment Agency
               </p>
               <div className="flex items-center space-x-4">
