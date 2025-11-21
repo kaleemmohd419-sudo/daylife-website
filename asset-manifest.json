@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.714c52cf.css",
-    "main.js": "/static/js/main.120a38c8.js",
+    "main.js": "/static/js/main.881987f9.js",
     "static/js/453.81fc678f.chunk.js": "/static/js/453.81fc678f.chunk.js",
     "static/media/flag-indian.mp4": "/static/media/flag-indian.1eff354ce4cf270f9e24.mp4",
     "static/media/flag-saudiarabia.mp4": "/static/media/flag-saudiarabia.028553dba2aa92f6b3be.mp4",
@@ -20,11 +20,11 @@
     "static/media/Flag_of_India.svg": "/static/media/Flag_of_India.6b649ec2cfe3d0a7fbf24f08270c33a1.svg",
     "index.html": "/index.html",
     "main.714c52cf.css.map": "/static/css/main.714c52cf.css.map",
-    "main.120a38c8.js.map": "/static/js/main.120a38c8.js.map",
+    "main.881987f9.js.map": "/static/js/main.881987f9.js.map",
     "453.81fc678f.chunk.js.map": "/static/js/453.81fc678f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.714c52cf.css",
-    "static/js/main.120a38c8.js"
+    "static/js/main.881987f9.js"
   ]
 }
