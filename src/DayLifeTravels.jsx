@@ -639,24 +639,24 @@ const DayLifeTravels = () => {
 
                     <div className="flex items-start space-x-4">
                       <div className="bg-white p-3 rounded-xl shadow-lg">
-                        <FaWhatsapp className="w-6 h-6 text-green-700" />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-lg text-gray-800 mb-1">WhatsApp</h4>
-                        <p className="text-gray-700"><a href="https://wa.me/+918143190670" className="hover:underline transition-all duration-200">+91 8143190670 - SHAIK IMRAN AHMED</a></p>
-                        <p className="text-gray-700"><a href="https://wa.me/+918712246509" className="hover:underline transition-all duration-200">+91 8712246509 - RAFI AHMED</a></p>
-                        <p className="text-gray-700">Available 24/7 for inquiries</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-white p-3 rounded-xl shadow-lg">
                         <Phone className="w-6 h-6 text-green-700" />
                       </div>
                       <div>
                         <h4 className="font-bold text-lg text-gray-800 mb-1">Phone</h4>
                         <p className="text-gray-700">+966 508021982</p>
                         <p className="text-gray-700">+966 574003927</p>
+                        <p className="text-gray-700">Available 24/7 for inquiries</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-white p-3 rounded-xl shadow-lg">
+                        <FaWhatsapp className="w-6 h-6 text-green-700" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg text-gray-800 mb-1">WhatsApp</h4>
+                        <p className="text-gray-700"><a href="https://wa.me/+918143190670" className="hover:underline transition-all duration-200">+91 8143190670 - SHAIK IMRAN AHMED</a></p>
+                        <p className="text-gray-700"><a href="https://wa.me/+918712246509" className="hover:underline transition-all duration-200">+91 8712246509 - RAFI AHMED</a></p>
                         <p className="text-gray-700">Available 24/7 for inquiries</p>
                       </div>
                     </div>
@@ -816,7 +816,7 @@ const DayLifeTravels = () => {
                   <Instagram className="w-5 h-5 text-green-400" />
                   <span className="text-gray-400">
                     <a href="https://www.instagram.com/immu89600?utm_source=qr&igsh=MXEzeHlsZ3NlangyZw%3D%3D">
-                      Imran Ahmed
+                      Golden Dreams Agency
                     </a>
                   </span>
                 </div>
@@ -825,7 +825,7 @@ const DayLifeTravels = () => {
                   <Facebook className="w-5 h-5 text-green-400" />
                   <span className="text-gray-400">
                     <a href="https://www.facebook.com/imran.ahmed.113044?rdid=zg0JXql4BRIx7MW3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BmJ8Ev8Mx%2F#">
-                      Imran Ahmed
+                      Golden Dreams Agency
                     </a>
                   </span>
                 </div>
