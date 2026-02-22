@@ -632,8 +632,10 @@ const DayLifeTravels = () => {
                         <MapPin className="w-6 h-6 text-orange-600" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-lg text-gray-800 mb-1">Our Office</h4>
+                        <h4 className="font-bold text-lg text-gray-800 mb-1">Our Offices</h4>
                         <p className="text-gray-700">Al-Olaya district, Riyadh, KSA</p>
+                        <hr className="flex-grow border-t-2 border-black my-3" />
+                        <p className="text-gray-700">1st Floor, Beside Empala Hotel, Masab Tank, Hyderabad, India </p>
                       </div>
                     </div>
 
@@ -643,7 +645,7 @@ const DayLifeTravels = () => {
                       </div>
                       <div>
                         <h4 className="font-bold text-lg text-gray-800 mb-1">Phone</h4>
-                        <p className="text-gray-700">+966 508021982</p>
+                        <p className="text-gray-700">+966 577071727</p>
                         <p className="text-gray-700">+966 574003927</p>
                         <p className="text-gray-700">Available 24/7 for inquiries</p>
                       </div>
@@ -679,7 +681,7 @@ const DayLifeTravels = () => {
                       </div>
                       <div>
                         <h4 className="font-bold text-lg text-gray-800 mb-1">Working Hours</h4>
-                        <p className="text-gray-700">Monday - Saturday: 9 AM - 7 PM</p>
+                        <p className="text-gray-700">Monday - Saturday: 10 AM - 7 PM</p>
                         <p className="text-gray-700">Sunday: By Appointment</p>
                       </div>
                     </div>
@@ -802,7 +804,7 @@ const DayLifeTravels = () => {
 
                 <div className="flex items-center space-x-3 justify-center">
                   <Phone className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-400">+966 508021982</span>
+                  <span className="text-gray-400">+966 577071727</span>
                 </div>
 
                 <div className="flex items-center space-x-3 justify-center">
